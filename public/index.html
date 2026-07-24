@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skillux Freelance Marketplace</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="#home">Skillux</a>
+    <a href="#projects">Projects</a><a href="#about">About Us</a><a href="#privacy">Privacy Policy</a><a href="#auth">Login / Sign up</a>
+  </nav>
+  <main>
+    <section id="home" class="hero">
+      <div><p class="eyebrow">Full-stack freelancing platform</p><h1>Hire experts or find premium freelance work.</h1><p>Skillux connects clients and freelancers with secure accounts, curated projects, and Google sign-in.</p><a class="button" href="#auth">Get started</a></div>
+      <div class="card"><h2>Live projects</h2><div id="projectList"></div></div>
+    </section>
+    <section id="about" class="panel"><h2>About Us</h2><p>Skillux is built for fast, trustworthy collaboration. Clients can post digital work and freelancers can discover projects across design, development, writing, and marketing.</p></section>
+    <section id="privacy" class="panel"><h2>Privacy Policy</h2><p>We store only essential account data such as name, email, provider, and profile image. Passwords are hashed before storage. Google login uses a verified ID token and never stores your Google password.</p></section>
+    <section id="auth" class="auth-grid">
+      <form id="signupForm" class="panel"><h2>Create account</h2><input name="name" placeholder="Full name" required><input name="email" type="email" placeholder="Email" required><input name="password" type="password" placeholder="Password (6+ chars)" required><button>Sign up</button></form>
+      <form id="loginForm" class="panel"><h2>Login</h2><input name="email" type="email" placeholder="Email" required><input name="password" type="password" placeholder="Password" required><button>Login</button><div id="googleSignIn"></div></form>
+    </section>
+    <section class="panel"><h2>Session</h2><p id="sessionState">Checking session...</p><button id="logoutButton">Logout</button><p id="message"></p></section>
+  </main>
+  <footer>© 2026 Skillux. Built with Node.js, a JSON database, and Google Identity Services.</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
